@@ -21,12 +21,12 @@ Entirely customizable and easy to use.**
 
 <!--TODO: List what your package can do. Maybe include images, gifs, or videos.-->
 - [x] Include **log** and **ensure** features
-- [ ] Right message on console or on integrated flutter dev tools
-- [ ] Error log and ensure are break point
+- [x] Right message on console or on integrated flutter dev tools
+- [x] Error log and ensure are break point
 - [x] Log with different categories and severity
 - [x] Personalized log message for each category
-- [ ] Export log to file
 - [x] Export log to json
+- [ ] Export log to file
 
 
 
