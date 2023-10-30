@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:ansicolor/ansicolor.dart';
-import 'package:flutter/foundation.dart';
 import 'package:log_tanker/src/log/log.dart';
 import 'package:log_tanker/src/log/log_categories.dart';
 import 'dart:developer';
@@ -26,7 +25,7 @@ class Logger {
     final Log logMetaData = Log(message: message, category: category);
     _globalLogList.add(logMetaData);
     _logList.add(logMetaData);
-    debugPrint(logMetaData.category.formatter(logMetaData, this));
+    print(logMetaData.category.formatter(logMetaData, this));
     debugger(
         when: logMetaData.category.mustBreakDebug,
         message: logMetaData.message);
