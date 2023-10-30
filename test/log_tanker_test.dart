@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:log_tanker/log_tanker.dart';
+import 'package:test/test.dart';
 
 void main() {
   setUp(() => Logger.getGlobalLogList.clear());
@@ -100,7 +98,7 @@ void main() {
   group("Log To Json", () {
     test('Log to json', () {
       final String json = Logger.getLogDataBaseToJson();
-      debugPrint(json);
+      print(json);
     });
   });
 }
