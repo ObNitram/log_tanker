@@ -10,10 +10,12 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
-Logging package for flutter and dart focused on very fast set up.
-Entirely customizable and easy to use.
-
-![log_tanker.png](log_tanker.png)
+# Log Tanker
+**Logging package for flutter and dart focused on very fast set up.
+Entirely customizable and easy to use.**
+<p align="center">
+  <img src="https://github.com/ObNitram/log_tanker/blob/main/log_tanker.png?raw=true" width=50% height=50%>
+</p>
 
 ## Features
 
