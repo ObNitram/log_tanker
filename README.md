@@ -27,6 +27,10 @@ Entirely customizable and easy to use.**
 - [x] Personalized log message for each category
 - [x] Export log to json
 - [ ] Export log to file
+- [ ] No cost for use in production
+- [ ] Complete documentation
+- [ ] Complete api reference
+- [ ] Complete example
 
 
 
