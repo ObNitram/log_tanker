@@ -8,8 +8,8 @@ environment:
 
 dependencies:
   ansicolor: ^2.0.2
-  flutter:
-    sdk: flutter
+  # flutter:
+  #   sdk: flutter
 
 dev_dependencies:
   flutter_test:
