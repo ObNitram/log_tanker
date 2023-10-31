@@ -97,8 +97,22 @@ void main() {
 
   group("Log To Json", () {
     test('Log to json', () {
+      QuickLog.v("Verbose log");
+      QuickLog.d("Debug log");
+      QuickLog.i("Info log");
+      QuickLog.w("Warning log");
+
       final String json = Logger.getLogDataBaseToJson();
-      print(json);
+
+      expect(json.contains('"message":"Verbose log"'), isTrue);
+      expect(json.contains('"message":"Debug log"'), isTrue);
+      expect(json.contains('"message":"Info log"'), isTrue);
+      expect(json.contains('"message":"Warning log"'), isTrue);
+
+      expect(json.contains('"category":"verbose"'), isTrue);
+      expect(json.contains('"category":"debug"'), isTrue);
+      expect(json.contains('"category":"info"'), isTrue);
+      expect(json.contains('"category":"warning"'), isTrue);
     });
   });
 }
