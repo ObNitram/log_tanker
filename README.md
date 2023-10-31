@@ -26,7 +26,7 @@ Entirely customizable and easy to use.**
 - [x] Log with different categories and severity
 - [x] Personalized log message for each category
 - [x] Export log to json
-- [ ] Export log to file
+- [x] Export log to file
 - [ ] No cost for use in production
 - [ ] Complete documentation
 - [ ] Complete api reference

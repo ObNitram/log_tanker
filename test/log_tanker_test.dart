@@ -95,24 +95,45 @@ void main() {
             "This test pass on local machine but not on github actions => debug stop execution");
   });
 
-  group("Log To Json", () {
-    test('Log to json', () {
+  group("Export log", () {
+    test("to json", () {
       QuickLog.v("Verbose log");
       QuickLog.d("Debug log");
       QuickLog.i("Info log");
       QuickLog.w("Warning log");
 
       final String json = Logger.getLogDataBaseToJson();
+      // print(json);
 
-      expect(json.contains('"message":"Verbose log"'), isTrue);
-      expect(json.contains('"message":"Debug log"'), isTrue);
-      expect(json.contains('"message":"Info log"'), isTrue);
-      expect(json.contains('"message":"Warning log"'), isTrue);
+      expect(json.contains('"message": "Verbose log"'), isTrue);
+      expect(json.contains('"message": "Debug log"'), isTrue);
+      expect(json.contains('"message": "Info log"'), isTrue);
+      expect(json.contains('"message": "Warning log"'), isTrue);
 
-      expect(json.contains('"category":"verbose"'), isTrue);
-      expect(json.contains('"category":"debug"'), isTrue);
-      expect(json.contains('"category":"info"'), isTrue);
-      expect(json.contains('"category":"warning"'), isTrue);
+      expect(json.contains('"category": "verbose"'), isTrue);
+      expect(json.contains('"category": "debug"'), isTrue);
+      expect(json.contains('"category": "info"'), isTrue);
+      expect(json.contains('"category": "warning"'), isTrue);
+    });
+
+    test("to file", () {
+      QuickLog.v("Verbose log");
+      QuickLog.d("Debug log");
+      QuickLog.i("Info log");
+      QuickLog.w("Warning log");
+
+      final String json = Logger.getLogDataBaseToFile();
+      // print(json);
+
+      expect(json.contains("Verbose log"), isTrue);
+      expect(json.contains("Debug log"), isTrue);
+      expect(json.contains("Info log"), isTrue);
+      expect(json.contains("Warning log"), isTrue);
+
+      expect(json.contains("verbose"), isTrue);
+      expect(json.contains("debug"), isTrue);
+      expect(json.contains("info"), isTrue);
+      expect(json.contains("warning"), isTrue);
     });
   });
 }

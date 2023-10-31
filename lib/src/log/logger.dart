@@ -1,9 +1,9 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:ansicolor/ansicolor.dart';
 import 'package:log_tanker/src/log/log.dart';
 import 'package:log_tanker/src/log/log_categories.dart';
-import 'dart:developer';
 
 class Logger {
   final String loggerName;
@@ -18,7 +18,16 @@ class Logger {
   static List<Log> get getGlobalLogList => _globalLogList;
 
   static String getLogDataBaseToJson() {
-    return jsonEncode(getGlobalLogList.map((e) => e.toJson()).toList());
+    return const JsonEncoder.withIndent("  ")
+        .convert(getGlobalLogList.map((e) => e.toJson()).toList());
+  }
+
+  static String getLogDataBaseToFile() {
+    String logDataBase = "";
+    for (final Log log in getGlobalLogList) {
+      logDataBase += "[${log.time} ${log.category.name}] : ${log.message}\n";
+    }
+    return logDataBase;
   }
 
   void log(String message, LogCategories category) {
