@@ -27,6 +27,7 @@ Entirely customizable and easy to use.**
 - [x] Personalized log message for each category
 - [x] Export log to json
 - [x] Export log to file
+- [ ] Listen all your log via stream 
 - [ ] No cost for use in production
 - [ ] Complete documentation
 - [ ] Complete api reference
@@ -34,23 +35,54 @@ Entirely customizable and easy to use.**
 
 
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+## Getting Started with Log_Tanker
+Utilize the QuickLog static class for rapid logging operations:
 ```dart
+  setState(() {
+    _counter++;
 
-const like = 'sample';
+    QuickLog.v("Counter incremented to $_counter");
+    QuickLog.d("Counter incremented to $_counter");
+    QuickLog.i("Counter incremented to $_counter");
+    QuickLog.w("Counter incremented to $_counter");
+  });
 ```
 
-## Additional information
+For conditional logging and debugging, QuickLog offers the ensure method :
+```dart
+  setState(() {
+    _counter++;
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+    // In debug mode, the following will trigger a debugger breakpoint
+    QuickLog.ensure(_counter < 5, message: "Counter must be less than 5");
+  });
+```
+
+For more personalized logging, instantiate your own Logger object :
+```dart
+  Logger myLogger = Logger(loggerName: "MyLogger");
+  
+  // ...
+  
+  setState(() {
+    _counter++;
+  
+    // Use your custom logger
+    myLogger.v("Counter incremented to $_counter"); // Verbose log
+    myLogger.d("Counter incremented to $_counter"); // Debug log
+    myLogger.i("Counter incremented to $_counter"); // Info log
+    myLogger.w("Counter incremented to $_counter"); // Warning log
+  
+    // Triggers a debugger breakpoint in debug mode if the condition is false
+    myLogger.ensure(_counter < 5, message: "Counter must be less than 5");
+  });
+```
+
+## Project Example
+For complete demonstrations, refer to the following examples:
+- [flutter_log_tanker_example](./example/flutter_log_tanker_example)
+- [dart_log_tanker_example](./example/dart_log_tanker_example)
+
+
+## Additional Information
+If you encounter any problems, feel free to create an issue. You are also welcome to participate in discussions and contribute if you wish.
