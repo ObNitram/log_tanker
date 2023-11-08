@@ -85,4 +85,4 @@ For complete demonstrations, refer to the following examples:
 
 
 ## Additional Information
-If you encounter any problems, feel free to create an issue. You are also welcome to participate in discussions and contribute if you wish.
+If you encounter any problems, feel free to create an [Issue](https://github.com/ObNitram/log_tanker/issues). You are also welcome to participate in discussions and contribute if you wish.
