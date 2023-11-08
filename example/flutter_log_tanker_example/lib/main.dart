@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:log_tanker/log_tanker.dart';
 
+Logger myLogger = Logger(loggerName: "MyLogger");
+
 void main() {
   runApp(const MyApp());
 }
@@ -45,6 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
       // In debug mode, the following will trigger a debugger breakpoint
       QuickLog.ensure(_counter < 5, message: "Counter must be less than 5");
+
+      myLogger.v("Counter incremented to $_counter");
+      myLogger.d("Counter incremented to $_counter");
+      myLogger.i("Counter incremented to $_counter");
+      myLogger.w("Counter incremented to $_counter");
+
+      // In debug mode, the following will trigger a debugger breakpoint
+      myLogger.ensure(_counter < 5, message: "Counter must be less than 5");
     });
   }
 
