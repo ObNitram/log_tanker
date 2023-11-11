@@ -43,16 +43,3 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-
-coverage/
-
-# Delete example platform specific folders
-example/*/build
-
-example/*/android
-example/*/ios
-example/*/web
-
-example/*/linux
-example/*/macos
-example/*/windows
