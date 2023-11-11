@@ -7,3 +7,4 @@ linter:
   rules:
     - always_declare_return_types
     - prefer_const_constructors
+    - prefer_double_quotes

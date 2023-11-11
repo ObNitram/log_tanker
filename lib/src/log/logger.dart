@@ -50,22 +50,22 @@ class Logger {
 
   /// Log a [verboseLog] message to the console.
   void v(String message, {String stackTrace = ""}) {
-    log(message, verboseLog);
+    log(message, verboseLog, stackTrace: stackTrace);
   }
 
   /// Log an [infoLog] message to the console.
   void i(String message, {String stackTrace = ""}) {
-    log(message, infoLog);
+    log(message, infoLog, stackTrace: stackTrace);
   }
 
   /// Log a [warningLog] message to the console.
   void w(String message, {String stackTrace = ""}) {
-    log(message, warningLog);
+    log(message, warningLog, stackTrace: stackTrace);
   }
 
   /// Log an [errorLog] message to the console.
   void e(String message, {String stackTrace = ""}) {
-    log(message, errorLog);
+    log(message, errorLog, stackTrace: stackTrace);
   }
 
   /// TODO: Add documentation
@@ -85,7 +85,7 @@ class Logger {
   /// Log a [debugLog] message to the console.
   /// The must be use to do log during development. It will be removed in production.
   void d(String message, {String stackTrace = ""}) {
-    log(message, debugLog);
+    log(message, debugLog, stackTrace: stackTrace);
   }
 
   /// Use to allow the logger to be called as a function. It will call the [d] method.
