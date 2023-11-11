@@ -6,21 +6,26 @@ abstract final class QuickLog {
 
   static Logger get getQuickLogger => _quickLogger;
 
-  static void log(String message, LogCategories category) =>
-      getQuickLogger.log(message, category);
+  static void log(String message, LogCategories category,
+          {String stackTrace = ""}) =>
+      getQuickLogger.log(message, category, stackTrace: stackTrace);
 
-  static void v(String message) => getQuickLogger.v(message);
+  static void v(String message, {String stackTrace = ""}) =>
+      getQuickLogger.v(message, stackTrace: stackTrace);
 
-  static void d(String message) => getQuickLogger.d(message);
+  static void i(String message, {String stackTrace = ""}) =>
+      getQuickLogger.i(message, stackTrace: stackTrace);
 
-  static void i(String message) => getQuickLogger.i(message);
+  static void w(String message, {String stackTrace = ""}) =>
+      getQuickLogger.w(message, stackTrace: stackTrace);
 
-  static void w(String message) => getQuickLogger.w(message);
+  static void e(String message, {String stackTrace = ""}) =>
+      getQuickLogger.e(message, stackTrace: stackTrace);
 
-  static void e(String message) => getQuickLogger.e(message);
+  static bool ensure(bool condition, String message,
+          {LogCategories category = ensureLog}) =>
+      getQuickLogger.ensure(condition, message, category: category);
 
-  static bool ensure(bool condition,
-          {String message = "Ensure failed",
-          LogCategories category = ensureLog}) =>
-      getQuickLogger.ensure(condition, message: message, category: category);
+  static void d(String message, {String stackTrace = ""}) =>
+      getQuickLogger.d(message, stackTrace: stackTrace);
 }

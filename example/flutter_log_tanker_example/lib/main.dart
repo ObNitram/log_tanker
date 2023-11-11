@@ -10,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       QuickLog.w("Counter incremented to $_counter");
 
       // In debug mode, the following will trigger a debugger breakpoint
-      QuickLog.ensure(_counter < 5, message: "Counter must be less than 5");
+      QuickLog.ensure(_counter < 5, "Counter must be less than 5");
 
       myLogger.v("Counter incremented to $_counter");
       myLogger.d("Counter incremented to $_counter");
@@ -54,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
       myLogger.w("Counter incremented to $_counter");
 
       // In debug mode, the following will trigger a debugger breakpoint
-      myLogger.ensure(_counter < 5, message: "Counter must be less than 5");
+      myLogger.ensure(_counter < 5, "Counter must be less than 5");
     });
   }
 

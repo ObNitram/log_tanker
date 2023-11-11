@@ -15,10 +15,16 @@ class LogCategories {
 
 String formatBasicLog(Log logObject, Logger logger) {
   final String time = logObject.time.toIso8601String();
-
   final String level = logObject.category.name;
   final String message = logObject.message;
-  return "[$time ${logger.loggerName} $level] : $message";
+
+  String logString = "[$time ${logger.loggerName} $level] : $message";
+
+  if (logObject.stackTrace.isNotEmpty) {
+    logString += "\n StackTrace => ${logObject.stackTrace}";
+  }
+
+  return logString;
 }
 
 String formatVerbose(Log logObject, Logger logger) {

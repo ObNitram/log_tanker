@@ -74,13 +74,13 @@ void main() {
             "This test pass on local machine but not on github actions => debug stop execution");
 
     test('Ensure true is true', () {
-      QuickLog.ensure(true, message: "Ensure true");
+      QuickLog.ensure(true, "Ensure true");
 
       expect(Logger.getGlobalLogList.length, equals(0));
     });
 
     test('Ensure false is false', () {
-      QuickLog.ensure(false, message: "Ensure false");
+      QuickLog.ensure(false, "Ensure false");
 
       expect(Logger.getGlobalLogList.length, equals(1));
 
