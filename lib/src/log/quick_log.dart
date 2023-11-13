@@ -1,5 +1,5 @@
-import 'package:log_tanker/src/log/log_categories.dart';
-import 'package:log_tanker/src/log/logger.dart';
+import "package:log_tanker/src/log/log_categories.dart";
+import "package:log_tanker/src/log/logger.dart";
 
 abstract final class QuickLog {
   static final Logger _quickLogger = Logger(loggerName: "QuickLog");

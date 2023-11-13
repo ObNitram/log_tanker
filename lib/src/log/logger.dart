@@ -1,9 +1,9 @@
-import 'dart:convert';
-import 'dart:developer';
+import "dart:convert";
+import "dart:developer";
 
-import 'package:ansicolor/ansicolor.dart';
-import 'package:log_tanker/src/log/log.dart';
-import 'package:log_tanker/src/log/log_categories.dart';
+import "package:ansicolor/ansicolor.dart";
+import "package:log_tanker/src/log/log.dart";
+import "package:log_tanker/src/log/log_categories.dart";
 
 class Logger {
   final String loggerName;

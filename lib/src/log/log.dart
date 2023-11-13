@@ -1,4 +1,4 @@
-import 'package:log_tanker/src/log/log_categories.dart';
+import "package:log_tanker/src/log/log_categories.dart";
 
 class Log {
   final String message;

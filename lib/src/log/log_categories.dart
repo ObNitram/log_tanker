@@ -1,6 +1,6 @@
-import 'package:ansicolor/ansicolor.dart';
-import 'package:log_tanker/src/log/log.dart';
-import 'package:log_tanker/src/log/logger.dart';
+import "package:ansicolor/ansicolor.dart";
+import "package:log_tanker/src/log/log.dart";
+import "package:log_tanker/src/log/logger.dart";
 
 class LogCategories {
   final String name;
@@ -28,7 +28,7 @@ String formatBasicLog(Log logObject, Logger logger) {
 }
 
 String formatVerbose(Log logObject, Logger logger) {
-  final AnsiPen verbosePen = AnsiPen()..gray();
+  final AnsiPen verbosePen = AnsiPen();
   return verbosePen(formatBasicLog(logObject, logger));
 }
 
