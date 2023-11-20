@@ -1,13 +1,15 @@
 name: log_tanker
-description: \
-  Logging package for flutter and dart focused on very fast set up. Entirely customizable and easy to use.
+description: Logging package for flutter and dart focused on very fast set up. Entirely customizable and easy to use.
 version: 0.0.1
 
 repository: https://github.com/ObNitram/log_tanker
 issue_tracker: https://github.com/ObNitram/log_tanker/issues
 
+
+
 environment:
   sdk: '>=3.1.3 <4.0.0'
+
 
 dependencies:
   ansicolor: ^2.0.2

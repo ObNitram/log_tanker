@@ -6,19 +6,12 @@ Entirely customizable and easy to use.**
 </p>
 
 ## Features
-- [x] Include **log** and **ensure** features
-- [x] Right message on console or on integrated flutter dev tools
-- [x] Error log and ensure are break point
-- [x] Log with different categories and severity
-- [x] Personalized log message for each category
-- [x] Export log to json
-- [x] Export log to file
-- [ ] Listen all your log via stream 
-- [ ] No cost for use in production
-- [ ] Complete documentation
-- [x] Complete api reference
-- [ ] Complete example
-
+- Include **log** and **ensure** features
+- Right message on console or on integrated flutter dev tools
+- Error log and ensure are break point
+- Log with different categories and severity
+- Export log to json file or raw text
+- Listen all your log via stream
 
 
 ## Getting Started with Log_Tanker
@@ -65,9 +58,7 @@ For more personalized logging, instantiate your own Logger object :
 ```
 
 ## Project Example
-For complete demonstrations, refer to the following examples:
-- [flutter_log_tanker_example](./example/flutter_log_tanker_example)
-<!-- - [dart_log_tanker_example](./example/dart_log_tanker_example) -->
+For complete demonstrations, refer to the [example page](example/example.md).
 
 
 ## Additional Information

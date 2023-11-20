@@ -1,16 +1,3 @@
 # flutter_log_tanker_example
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Overview
+flutter_log_tanker_example is a Flutter project designed to showcase the implementation and capabilities of the log_tanker package in a Flutter environment. This project serves as a practical example, demonstrating the robust logging functionalities provided by the log_tanker package within a mobile application developed using Flutter.
