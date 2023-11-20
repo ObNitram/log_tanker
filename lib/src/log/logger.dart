@@ -5,23 +5,32 @@ import "package:ansicolor/ansicolor.dart";
 import "package:log_tanker/src/log/log.dart";
 import "package:log_tanker/src/log/log_categories.dart";
 
+/// Class `Logger` for managing and outputting log entries.
 class Logger {
+  /// Name of the logger.
   final String loggerName;
+
+  /// List of log entries specific to this logger.
   final List<Log> _logList = [];
 
+  /// Global list of all log entries across all logger instances.
   static final List<Log> _globalLogList = [];
 
+  /// Constructor for `Logger`.
   Logger({required this.loggerName}) {
     ansiColorDisabled = false;
   }
 
+  /// Getter for global log list.
   static List<Log> get getGlobalLogList => _globalLogList;
 
+  /// Converts the global log database to a JSON string.
   static String getLogDataBaseToJson() {
     return const JsonEncoder.withIndent("  ")
         .convert(getGlobalLogList.map((e) => e.toJson()).toList());
   }
 
+  /// Converts the global log database to a file format string.
   static String getLogDataBaseToFile() {
     String logDataBase = "";
     for (final Log log in getGlobalLogList) {
@@ -31,7 +40,7 @@ class Logger {
   }
 
   /// Log a message with your own [category] to the console.
-  /// Prefer to use the [v], [d], [i], [w], [e] methods.
+  /// Prefer to use the [v], [d], [i], [w], [e] methods for include categories.
   void log(String message, LogCategories category, {String stackTrace = ""}) {
     final Log logMetaData = Log(
       message: message,
@@ -68,7 +77,7 @@ class Logger {
     log(message, errorLog, stackTrace: stackTrace);
   }
 
-  /// TODO: Add documentation
+  /// Ensures a condition is true, otherwise logs a message.
   bool ensure(
     bool condition,
     String message, {
