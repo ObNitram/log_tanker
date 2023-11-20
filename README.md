@@ -30,7 +30,7 @@ Entirely customizable and easy to use.**
 - [ ] Listen all your log via stream 
 - [ ] No cost for use in production
 - [ ] Complete documentation
-- [ ] Complete api reference
+- [x] Complete api reference
 - [ ] Complete example
 
 
