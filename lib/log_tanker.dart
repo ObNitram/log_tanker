@@ -29,6 +29,7 @@ library log_tanker;
 /// Exports the [Log] class from [log.dart].
 /// This class is used for creating and managing log entries.
 export "package:log_tanker/src/log/log.dart" show Log;
+
 /// Exports the [LogCategories] class and various log category constants
 /// like [verboseLog], [debugLog], [infoLog], [warningLog], [errorLog], [ensureLog]
 /// from [log_categories.dart].
@@ -42,10 +43,12 @@ export "package:log_tanker/src/log/log_categories.dart"
         warningLog,
         errorLog,
         ensureLog;
+
 /// Exports the [Logger] class from [logger.dart].
 /// This class is responsible for the actual logging logic, managing log entries,
 /// and providing various logging levels or methods.
 export "package:log_tanker/src/log/logger.dart" show Logger;
+
 /// Exports the [QuickLog] class from [quick_log.dart].
 /// This class offers static methods for quick logging without needing
 /// to instantiate a Logger object.
