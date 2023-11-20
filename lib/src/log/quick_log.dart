@@ -1,13 +1,13 @@
 import "package:log_tanker/src/log/log_categories.dart";
 import "package:log_tanker/src/log/logger.dart";
 
-/// `QuickLog` is an abstract final class providing static logging methods.
-/// It acts as a wrapper around a `Logger` instance for quick and easy logging.
+/// [QuickLog] is an abstract final class providing static logging methods.
+/// It acts as a wrapper around a [Logger] instance for quick and easy logging.
 abstract final class QuickLog {
-  /// Internal `Logger` instance used for all `QuickLog` methods.
+  /// Internal [Logger] instance used for all [QuickLog] methods.
   static final Logger _quickLogger = Logger(loggerName: "QuickLog");
 
-  /// Getter for the internal `Logger` instance.
+  /// Getter for the internal [Logger] instance.
   static Logger get getQuickLogger => _quickLogger;
 
   /// Log a message with your own [category] to the console.
@@ -16,28 +16,28 @@ abstract final class QuickLog {
           {String stackTrace = ""}) =>
       getQuickLogger.log(message, category, stackTrace: stackTrace);
 
-  /// Logs a verbose message.
+  /// Quick log a message using [Logger.v] function on the default [Logger] instance.
   static void v(String message, {String stackTrace = ""}) =>
       getQuickLogger.v(message, stackTrace: stackTrace);
 
-  /// Logs an informational message.
+  /// Quick log a message using [Logger.i] function on the default [Logger] instance.
   static void i(String message, {String stackTrace = ""}) =>
       getQuickLogger.i(message, stackTrace: stackTrace);
 
-  /// Logs a warning message.
+  /// Quick log a message using [Logger.w] function on the default [Logger] instance.
   static void w(String message, {String stackTrace = ""}) =>
       getQuickLogger.w(message, stackTrace: stackTrace);
 
-  /// Logs an error message.
+  /// Quick log a message using [Logger.e] function on the default [Logger] instance.
   static void e(String message, {String stackTrace = ""}) =>
       getQuickLogger.e(message, stackTrace: stackTrace);
 
-  /// Ensures a condition is true, logging an error message if not.
+  /// Ensures a condition is true, otherwise logs a message.
   static bool ensure(bool condition, String message,
           {LogCategories category = ensureLog}) =>
       getQuickLogger.ensure(condition, message, category: category);
 
-  /// Log a [debugLog] message to the console.
+  /// Quick log a message using [Logger.d] function on the default [Logger] instance.
   /// The must be use to do log during development. It will be removed in production.
   static void d(String message, {String stackTrace = ""}) =>
       getQuickLogger.d(message, stackTrace: stackTrace);
