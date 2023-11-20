@@ -6,8 +6,6 @@ Entirely customizable and easy to use.**
 </p>
 
 ## Features
-
-<!--TODO: List what your package can do. Maybe include images, gifs, or videos.-->
 - [x] Include **log** and **ensure** features
 - [x] Right message on console or on integrated flutter dev tools
 - [x] Error log and ensure are break point
