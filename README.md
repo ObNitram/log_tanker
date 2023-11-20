@@ -81,7 +81,7 @@ For more personalized logging, instantiate your own Logger object :
 ## Project Example
 For complete demonstrations, refer to the following examples:
 - [flutter_log_tanker_example](./example/flutter_log_tanker_example)
-- [dart_log_tanker_example](./example/dart_log_tanker_example)
+<!-- - [dart_log_tanker_example](./example/dart_log_tanker_example) -->
 
 
 ## Additional Information
