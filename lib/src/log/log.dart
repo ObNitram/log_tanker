@@ -1,7 +1,6 @@
 import "package:log_tanker/src/log/log_categories.dart";
 
 /// The `Log` class for creating and managing log entries.
-///
 /// Stores information such as log messages, stack traces, timestamps, and log categories.
 class Log {
   /// The main message of the log entry.
@@ -24,7 +23,6 @@ class Log {
   });
 
   /// Converts the log entry to a JSON map.
-  ///
   /// Returns a map containing the log's message, stack trace, timestamp, and category.
   Map<String, dynamic> toJson() {
     return {

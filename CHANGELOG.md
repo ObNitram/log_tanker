@@ -10,13 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add stream listener to logger.
 - Add integration with flutter dev tools.
 
-## [0.0.2] - 2023-11-20
+## 0.0.2 - 2023-11-20
 
 ### Added
 - Added a flutter example project to demonstrate the capabilities of the package in a Flutter environment.
 
 
-## [0.0.1] - 2023-11-20
+## 0.0.1 - 2023-11-20
 
 ### Added
 - Initial release of the package.
